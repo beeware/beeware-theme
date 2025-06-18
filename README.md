@@ -16,7 +16,7 @@ These template files are designed to override the Furo Sphinx theme, and will th
 ```python
 import beeware_theme
 
-# BeeWare theme override for Furo Sphinx theme to add BeeWare features.
+
 templates_path = []
 html_static_path = []
 
