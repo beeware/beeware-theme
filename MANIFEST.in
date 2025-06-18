@@ -1,0 +1,2 @@
+recursive-include src/beeware-theme/_templates/ *.html
+recursive-include src/beeware-theme/_static/ *.css *.png
