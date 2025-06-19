@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools >= 77.0.3"]
+requires = ["setuptools == 80.9.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "beeware_theme"
-version = "0.0.1"
+version = "20250619.0"
 authors = [
   { name="Kattni", email="kattni@kattni.com" },
-  { name="Russell Keith-Magee", email="russell@beeware.org" },
-  { name="Pradyun Gedam", email="mail@pradyunsg.me" },
+]
+maintainers = [
+  { name="BeeWare Team", email="team@beeware.org" },
 ]
 description = "Template files to override the Furo Sphinx theme with a BeeWare theme."
 readme = "README.md"
@@ -17,9 +18,21 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-license = "MIT"
-license-files = ["LICEN[CS]E*"]
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+docs = [
+   "sphinx == 8.2.3",
+   "furo == 2024.8.6",
+]
 
 [project.urls]
-Homepage = "https://github.com/kattni/beeware-theme"
-Issues = "https://github.com/kattni/beeware-theme/issues"
+Homepage = "https://github.com/beeware/beeware-theme"
+Issues = "https://github.com/beeware/beeware-theme/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
