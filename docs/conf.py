@@ -30,8 +30,6 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_css_files = []
 
-templates_path = []
-
 beeware_theme.init(
     templates=templates_path,
     static=html_static_path,
