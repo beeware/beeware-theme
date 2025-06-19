@@ -1,0 +1,25 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    # Docs are always built on Python 3.12. See also the tox config and contribution docs.
+    python: "3.12"
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+  builder: html
+  configuration: docs/conf.py
+  fail_on_warning: true
+
+# Install extras for build
+python:
+  install:
+  - method: pip
+    path: .
+    extra_requirements:
+      - docs
