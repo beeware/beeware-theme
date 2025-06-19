@@ -21,13 +21,19 @@ import beeware_theme
 templates_path = []
 html_static_path = []
 html_css_files = []
+html_context = {}
 
 beeware_theme.init(
+    project_name="my_project",
     templates=templates_path,
+    context=html_context,
     static=html_static_path,
     css=html_css_files,
 )
 ```
+In this configuration, ``my_project`` is the GitHub project name. You can put
+any other content in ``template_paths``, ``html_static_path``,
+``html_css_files`` or ``html_context`` as is required by the local project.
 
 ## Testing
 
