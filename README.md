@@ -28,4 +28,13 @@ beeware_theme.init(
     css=html_css_files,
 )
 ```
-On initialization,
+
+## Testing
+
+To test this theme, create a virtual environment, and run:
+```
+(venv) $ pip install -e ".[dev]"
+(venv) $ tox -e docs-live
+```
+
+This will serve a test project with the theme applied.

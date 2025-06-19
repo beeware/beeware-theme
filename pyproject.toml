@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "beeware_theme"
-version = "20250619.0"
+version = "2025.06.19.0"
 authors = [
   { name="Kattni", email="kattni@kattni.com" },
 ]
@@ -22,9 +22,13 @@ license = "BSD-3-Clause"
 license-files = ["LICENSE"]
 
 [project.optional-dependencies]
+dev = [
+    "tox == 4.27.0",
+]
 docs = [
-   "sphinx == 8.2.3",
-   "furo == 2024.8.6",
+    "furo == 2024.8.6",
+    "sphinx == 8.2.3",
+    "sphinx-autobuild == 2024.10.3",
 ]
 
 [project.urls]
