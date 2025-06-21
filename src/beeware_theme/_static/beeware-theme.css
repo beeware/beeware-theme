@@ -11,10 +11,18 @@ body[data-theme="light"] {
     background-color: var(--color-background-primary);
 }
 
-/* Fixes issue with background colors on auto color mode */
+/* Fixes issue with code font colors on dark mode */
+body[data-theme="dark"] .sphinx-tabs pre {
+    color: #CFD0D0;
+}
+
+/* Fixes issue with background and code font colors on auto color mode */
 @media (prefers-color-scheme: dark) {
     body[data-theme=auto] {
         background-color: var(--color-background-primary);
+    }
+    body[data-theme=auto] .sphinx-tabs pre {
+        color: #CFD0D0;
     }
 }
 
@@ -32,6 +40,15 @@ body[data-theme="light"] {
 
 .navbar-brand, .navbar-nav {
     font-family: 'Cutive', serif;
+}
+
+.main {
+    box-sizing: unset;
+    font-size: 110%;
+}
+
+.bottom-of-page {
+    margin-top: 4rem;
 }
 
 /*----------------------------------------------------
@@ -75,56 +92,35 @@ body[data-theme=auto] a.muted-link {
 .page h2 {
     font-family: 'Cutive', serif;
     font-size: 160%;
-    margin: 1.8rem 0 0.8rem 0;
     line-height: 2rem;
-}
-
-.page h2:first-child {
-    margin-top: 1.4rem;
+    margin-top: 1.8rem;
 }
 
 .page h3 {
     font-family: 'Cutive', serif;
     font-size: 135%;
-    margin: 1.8rem 0 0.8rem 0;
     line-height: 1.8rem;
-}
-
-.page h3:first-child {
-    margin-top: 1.0rem;
+    margin-top: 1.6rem;
 }
 
 .page h4 {
     font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
     font-size: 120%;
     line-height: 1.6rem;
-}
-
-.page h4:first-child {
     margin-top: 0.8rem;
 }
-
 
 .page h5 {
     font-family: 'Cutive', serif;
     font-size: 110%;
-    margin: 1.8rem 0 0.8rem;
     line-height: 1.6rem;
-}
-
-.page h6:first-child {
     margin-top: 0.8rem;
 }
 
 .page h6 {
     font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
     font-size: 100%;
     line-height: 1.6rem;
-}
-
-.page h6:first-child {
     margin-top: 0.8rem;
 }
 
@@ -178,6 +174,7 @@ table.docutils {
 .widget-support caption {
     font-size: var(--font-size--normal);
     font-weight: bold;
+    caption-side: top;
 }
 
 span.beta, span.stable {
