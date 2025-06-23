@@ -13,7 +13,11 @@ body[data-theme="light"] {
 
 /* Fixes issue with code font colors on dark mode */
 body[data-theme="dark"] .sphinx-tabs pre {
-    color: #CFD0D0;
+    color: var(--color-foreground-primary);
+}
+
+body code.docutils {
+    color: var(--color-foreground-primary);
 }
 
 /* Fixes issue with background and code font colors on auto color mode */
@@ -40,6 +44,10 @@ body[data-theme="dark"] .sphinx-tabs pre {
 
 .navbar-brand, .navbar-nav {
     font-family: 'Cutive', serif;
+}
+
+.sidebar-drawer {
+    font-size: 110%;
 }
 
 .main {
