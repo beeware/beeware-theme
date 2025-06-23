@@ -2,32 +2,37 @@
   Bootstrap style override
  --------------------------------------------------- */
 
-/* Fixes issue with background colors being swapped in each mode */
+/* Fixes issue with background colors being inverted in dark mode */
 body[data-theme="dark"] {
     background-color: var(--color-background-primary);
 }
 
+/* Fixes issue with background colors being inverted in light mode */
 body[data-theme="light"] {
     background-color: var(--color-background-primary);
 }
 
-/* Fixes issue with code font colors on dark mode */
-body[data-theme="dark"] .sphinx-tabs pre {
-    color: var(--color-foreground-primary);
-}
-
-body code.docutils {
-    color: var(--color-foreground-primary);
-}
-
-/* Fixes issue with background and code font colors on auto color mode */
+/* Fixes for "auto" color mode:
+- Background colors are otherwise inverted
+- Code font color originally same as background */
 @media (prefers-color-scheme: dark) {
     body[data-theme=auto] {
         background-color: var(--color-background-primary);
     }
     body[data-theme=auto] .sphinx-tabs pre {
-        color: #CFD0D0;
+        color: var(--color-foreground-primary);
     }
+}
+
+/* Fixes issue with code font colors rendering same as background color
+   in tabbed content on dark mode */
+body[data-theme="dark"] .sphinx-tabs pre {
+    color: var(--color-foreground-primary);
+}
+
+/* Fixes issue with code font colors in text rendering as red */
+body code.docutils {
+    color: var(--color-foreground-primary);
 }
 
 .navbar {
@@ -38,6 +43,7 @@ body code.docutils {
     position: relative !important;
 }
 
+/* Logo width affects right margin on overall brand block */
 .navbar-brand img {
     max-width: initial;
 }
@@ -46,15 +52,12 @@ body code.docutils {
     font-family: 'Cutive', serif;
 }
 
-.sidebar-drawer {
-    font-size: 110%;
-}
-
+/* Width of main content decreased by Bootstrap, disable Bootstrap style */
 .main {
     box-sizing: unset;
-    font-size: 110%;
 }
 
+/* Footer layout broken by Bootstrap, this resolves layout */
 .bottom-of-page {
     margin-top: 4rem;
 }
@@ -64,10 +67,8 @@ body code.docutils {
  --------------------------------------------------- */
 
 /* This setting in Furo compounds with other font sizes and breaks the layout */
-@media (min-width: 97em) {
-    html {
-        font-size: 100%;
-    }
+html {
+    font-size: 100% !important;
 }
 
 /* Compensate for BeeWare header height on smaller displays */
@@ -77,8 +78,9 @@ body code.docutils {
     }
 }
 
-.mobile-header {
-    position: unset;
+/* Override Furo and Bootstrap font sizing to maintain desired size */
+.sidebar-drawer, .toc-drawer {
+    font-size: 110%;
 }
 
 /* Fixes the "View this page" icon color in dark modes */
