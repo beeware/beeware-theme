@@ -35,6 +35,11 @@ body code.docutils {
     color: var(--color-foreground-primary);
 }
 
+/* Table titles render on the bottom, should be on top */
+table.docutils caption {
+    caption-side: top;
+}
+
 .navbar {
     padding-top: 1em !important;
 }
