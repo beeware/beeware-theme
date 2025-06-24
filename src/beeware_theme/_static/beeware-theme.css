@@ -38,6 +38,7 @@ body code.docutils {
 /* Table titles render on the bottom, should be on top */
 table.docutils caption {
     caption-side: top;
+    color: var(--color-foreground-primary);
 }
 
 .navbar {
@@ -74,6 +75,10 @@ table.docutils caption {
 /* This setting in Furo compounds with other font sizes and breaks the layout */
 html {
     font-size: 100% !important;
+}
+
+.content {
+    width: 51rem;
 }
 
 /* Compensate for BeeWare header height on smaller displays */
