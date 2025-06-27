@@ -407,7 +407,3 @@ span.beta, span.stable {
     font-size: smaller;
     vertical-align: super;
 }
-
-.sphinx-tabs-panel p {
-    text-align: center;
-}
