@@ -11,11 +11,14 @@ Titlebar
 
 A dark gray titlebar is on the page. This confirms the theme template has been applied.
 
-Site icon
-~~~~~~~~~
+Header and logo icons
+~~~~~~~~~~~~~~~~~~~~~
 
-The icon top-left has been rendered. This confirms the template can reference external
-resources.
+The header icon top-left has been rendered. This confirms the template can reference
+external resources.
+
+The logo icon in the left sidebar has been rendered. This confirms the sidebar will
+render properly on the target sites.
 
 Heading font
 ~~~~~~~~~~~~
@@ -26,16 +29,16 @@ applied.
 Inline Code
 ~~~~~~~~~~~
 
-Inline code is rendered in the same color as the surrounding font. This confirms the
-CSS theme has applied.
+Inline code is rendered in the same color as the surrounding font. This confirms that
+the theme has not caused any undesired changes.
 
 This is text with ``inline code`` here and ``inline code`` here.
 
 Tabbed Content Code
 ~~~~~~~~~~~~~~~~~~~
 
-Code is in a contrasting color to the background. This confirms that the CSS theme has
-been applied.
+Code is in a contrasting color to the background. This confirms that the theme has not
+caused any undesired changes.
 
 .. tabs::
 
@@ -60,7 +63,8 @@ been applied.
 Table Caption Placement
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Table title renders above the table. This confirms the CSS theme has been applied.
+Table title renders above the table. This confirms the CSS theme has not caused any
+undesired changes.
 
 .. list-table:: Title
    :widths: 50 50
