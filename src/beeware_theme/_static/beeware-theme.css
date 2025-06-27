@@ -1,37 +1,272 @@
 /*----------------------------------------------------
-  Bootstrap style override
+  Build BeeWare header
  --------------------------------------------------- */
-
-/* Fixes issue with background colors being swapped in each mode */
-body[data-theme="dark"] {
-    background-color: var(--color-background-primary);
+.navbar {
+    font-family: 'Cutive', serif;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.5rem 1rem;
+    line-height: 1.5;
 }
 
-body[data-theme="light"] {
-    background-color: var(--color-background-primary);
+.navbar > .container,
+.navbar > .container-fluid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
-/* Fixes issue with background colors on auto color mode */
-@media (prefers-color-scheme: dark) {
-    body[data-theme=auto] {
-        background-color: var(--color-background-primary);
+.navbar-dark .navbar-brand {
+    color: white;
+}
+
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-dark .navbar-text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-dark .navbar-text a {
+    color: white;
+}
+
+.navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
+    color: white;
+}
+
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        padding: 0.3em !important;
+    }
+
+    .navbar-collapse li {
+        border-bottom: 1px solid #666;
+        padding: 0.5em 1em 0.4em;
+    }
+
+    .navbar {
+        padding: 0 !important;
+    }
+
+    .navbar-brand-block {
+        position: absolute;
+        margin-top: -40px;
+        padding: 0 1em 0.2em;
+        right: 10px;
+    }
+
+    .nav-top {
+        margin: 0.7em 1em;
+    }
+
+    .navbar-collapse {
+        background-color: #343a40;
+        padding-top: 0.75em;
+    }
+
+    .navbar-collapse .header-button li.nav-item {
+        border-bottom: 0
+    }
+
+    .navbar-collapse .header-button {
+        border-bottom: 1px solid #666;
     }
 }
 
-.navbar {
-    padding-top: 1em !important;
+@media (max-width: 767.98px) {
+    .navbar-expand-md > .container,
+    .navbar-expand-md > .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .navbar-expand-md .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .navbar-expand-md .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .navbar-expand-md > .container,
+    .navbar-expand-md > .container-fluid {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-expand-md .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+
+    .navbar-expand-md .navbar-toggler {
+        display: none;
+    }
 }
 
 .fixed-top {
-    position: relative !important;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.navbar-toggler:hover, .navbar-toggler:focus {
+    text-decoration: none;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
 }
 
 .navbar-brand img {
     max-width: initial;
+    margin-right: .5rem !important;
+    margin-left: .5rem !important;
+    vertical-align: middle;
 }
 
-.navbar-brand, .navbar-nav {
-    font-family: 'Cutive', serif;
+.navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    text-decoration: none !important;
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+}
+
+.mr-auto,
+.mx-auto {
+    margin-right: auto !important;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 /*----------------------------------------------------
@@ -39,27 +274,20 @@ body[data-theme="light"] {
  --------------------------------------------------- */
 
 /* This setting in Furo compounds with other font sizes and breaks the layout */
-@media (min-width: 97em) {
-    html {
-        font-size: 100%;
-    }
+html {
+    font-size: 100% !important;
 }
 
 /* Compensate for BeeWare header height on smaller displays */
 @media (max-width: 1007px) {
-    .sidebar-drawer, .toc-drawer {
-        padding-top: 3em;
+    .sidebar-drawer {
+        padding-top: 4em;
     }
 }
 
-.mobile-header {
-    position: unset;
-}
-
-/* Fixes the "View this page" icon color in dark modes */
-body[data-theme="dark"] {
-    .view-this-page svg {
-        color: #cfd0d0;
+@media (max-width: 1312px) {
+    .toc-drawer {
+        padding-top: 4em;
     }
 }
 
@@ -67,64 +295,43 @@ body[data-theme=auto] a.muted-link {
     color: #cfd0d0;
 }
 
-.page h1 {
+/* Furo sets the weight to 700, which is bolder than desired. */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
     font-family: 'Cutive', serif;
+    font-weight: 500;
+}
+
+.content h1 {
     margin-top: 1em;
 }
 
-.page h2 {
-    font-family: 'Cutive', serif;
+.content h2 {
     font-size: 160%;
-    margin: 1.8rem 0 0.8rem 0;
     line-height: 2rem;
+    margin-top: 1.8rem;
 }
 
-.page h2:first-child {
-    margin-top: 1.4rem;
-}
-
-.page h3 {
-    font-family: 'Cutive', serif;
+.content h3 {
     font-size: 135%;
-    margin: 1.8rem 0 0.8rem 0;
     line-height: 1.8rem;
+    margin-top: 1.6rem;
 }
 
-.page h3:first-child {
-    margin-top: 1.0rem;
-}
-
-.page h4 {
-    font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
+.content h4 {
     font-size: 120%;
     line-height: 1.6rem;
-}
-
-.page h4:first-child {
     margin-top: 0.8rem;
 }
 
-
-.page h5 {
-    font-family: 'Cutive', serif;
+.content h5 {
     font-size: 110%;
-    margin: 1.8rem 0 0.8rem;
     line-height: 1.6rem;
-}
-
-.page h6:first-child {
     margin-top: 0.8rem;
 }
 
-.page h6 {
-    font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
+.content h6 {
     font-size: 100%;
     line-height: 1.6rem;
-}
-
-.page h6:first-child {
     margin-top: 0.8rem;
 }
 
@@ -189,18 +396,14 @@ span.beta, span.stable {
 
 .sphinx-tabs-tab span.beta {
     color: lightslategray;
-    font-variant: italic;
+    font-style: italic;
     font-size: smaller;
     vertical-align: super;
 }
 
 .sphinx-tabs-tab span.no {
     color: lightcoral;
-    font-variant: italic;
+    font-style: italic;
     font-size: smaller;
     vertical-align: super;
-}
-
-.sphinx-tabs-panel p {
-    text-align: center;
 }
