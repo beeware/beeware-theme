@@ -75,7 +75,8 @@ body[data-theme=auto] a.muted-link {
 .page h2 {
     font-family: 'Cutive', serif;
     font-size: 160%;
-    margin: 1.8rem 0 0.8rem 0;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     line-height: 2rem;
 }
 
@@ -86,7 +87,8 @@ body[data-theme=auto] a.muted-link {
 .page h3 {
     font-family: 'Cutive', serif;
     font-size: 135%;
-    margin: 1.8rem 0 0.8rem 0;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     line-height: 1.8rem;
 }
 
@@ -96,7 +98,8 @@ body[data-theme=auto] a.muted-link {
 
 .page h4 {
     font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     font-size: 120%;
     line-height: 1.6rem;
 }
@@ -109,7 +112,8 @@ body[data-theme=auto] a.muted-link {
 .page h5 {
     font-family: 'Cutive', serif;
     font-size: 110%;
-    margin: 1.8rem 0 0.8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     line-height: 1.6rem;
 }
 
@@ -119,7 +123,8 @@ body[data-theme=auto] a.muted-link {
 
 .page h6 {
     font-family: 'Cutive', serif;
-    margin: 1.8rem 0 0.8rem 0;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     font-size: 100%;
     line-height: 1.6rem;
 }
