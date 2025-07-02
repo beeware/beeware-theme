@@ -20,7 +20,6 @@ extensions = [
     "sphinx_tabs.tabs",
 ]
 
-templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
@@ -29,16 +28,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_logo = "images/brutus-270.png"
 
 html_theme = 'furo'
-html_static_path = ["_static"]
-html_css_files = ["custom.css"]
-html_context = {}
-html_theme_options = {}
 
 beeware_theme.init(
-    project_name="beeware-theme",
-    templates=templates_path,
-    context=html_context,
-    static=html_static_path,
-    css=html_css_files,
-    theme_options=html_theme_options,
+    "beeware-theme",
+    templates=['_templates'],
+    static=["_static"],
+    css=["custom.css"],
 )
