@@ -17,25 +17,11 @@ These template files are designed to override the Furo Sphinx theme, and will th
 ```python
 import beeware_theme
 
-
-templates_path = []
-html_static_path = []
-html_css_files = []
-html_context = {}
-html_theme_options = {}
-
-beeware_theme.init(
-    project_name="my_project",
-    templates=templates_path,
-    context=html_context,
-    static=html_static_path,
-    css=html_css_files,
-    theme_options=html_theme_options,
-)
+beeware_theme.init("my_project")
 ```
-In this configuration, ``my_project`` is the GitHub project name. You can put
-any other content in ``template_paths``, ``html_static_path``,
-``html_css_files``, ``html_context`` or ``html_theme_options`` as is required by the
+In this configuration, ``my_project`` is the GitHub project name. You can pass
+any other content with the keyword arguments ``templates``, ``context``,
+``static``, ``css`` or ``theme_options``, as is required by the
 local project.
 
 ## Testing
