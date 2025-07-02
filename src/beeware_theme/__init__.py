@@ -3,6 +3,7 @@ from pathlib import Path
 
 def init(
     project_name,
+    *,
     templates=None,
     context=None,
     static=None,
