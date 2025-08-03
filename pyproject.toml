@@ -25,7 +25,7 @@ license-files = ["LICENSE"]
 
 [project.optional-dependencies]
 dev = [
-    "tox == 4.28.3",
+    "tox == 4.28.4",
 ]
 docs = [
     "furo == 2025.7.19",
