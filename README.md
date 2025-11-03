@@ -1,5 +1,7 @@
 # BeeWare Theme Templates
 
+**NOTE: This repository has been archived. It was used by Sphinx builds of BeeWare project documentation that had the shared documentation header (Briefacse 0.3.25, Toga 0.5.2, and Rubicon-ObjC 0.5.2). However, with the move to MkDocs for project documentation (completed October 2025) it is no longer required.**
+
 A collection of template files to override the [Furo Sphinx theme](https://github.com/pradyunsg/furo) with BeeWare header and sidebar branding.
 
 ## Usage
